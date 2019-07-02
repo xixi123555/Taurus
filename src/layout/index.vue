@@ -1,9 +1,13 @@
+
 <template>
-  
+  <div>
+    <p>layout</p>
+    <router-view :key="key" />
+  </div>
 </template>
 <script>
 export default {
-  name: "xxx",
+  name: "Layout",
   data () {
     return {
       
@@ -15,9 +19,14 @@ export default {
   mounted () {
     
   },
-  methods () {
+  methods: {
     
   },
+  computed: {
+    key() {
+      return this.$route.path
+    }
+  }
 }
 </script>
 <style lang="stylus" scoped>
